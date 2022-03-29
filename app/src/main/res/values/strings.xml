@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">Converter_lab2</string>
+    <string name="app_name">Converter</string>
+    <string name="meter_ru">метры</string>
+    <string name="centimeter_ru">сантиметры</string>
+    <string name="kilometer_ru">километры</string>
+    <string name="foot_ru">футы</string>
+    <string name="mile_ru">мили</string>
+    <string name="inch_ru">дюймы</string>
+    <string name="language_ru">Язык</string>
+    <string name="meter_en">meters</string>
+    <string name="centimeter_en">centimeters</string>
+    <string name="kilometer_en">kilometers</string>
+    <string name="foot_en">feet</string>
+    <string name="mile_en">miles</string>
+    <string name="inch_en">inches</string>
+    <string name="language_en">Language</string>
+    <string name="zero">0</string>
+    <string name="enter_en">Enter a number</string>
+    <string name="enter_ru">Введите число</string>
 </resources>
