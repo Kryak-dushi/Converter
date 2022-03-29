@@ -3,6 +3,7 @@ package com.example.converter_lab2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -10,11 +11,13 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     EditText editText;
@@ -52,11 +55,13 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String item = (String) parent.getItemAtPosition(position);
 
+                Locale locale;
                 if (item.equals(languages[0])) {
-
+                    locale = new Locale("ru");
                 } else {
-
+                    locale = new Locale("en");
                 }
+                changeLocale(locale);
             }
 
             @Override
@@ -65,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         };
         spinner.setOnItemSelectedListener(itemSelectedListener);
 
-        editText = findViewById(R.id.editTextNumber2);
+        editText = findViewById(R.id.enter);
         editText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -87,6 +92,60 @@ public class MainActivity extends AppCompatActivity {
                 setResults();
             }
         });
+    }
+
+    private void changeLocale(Locale locale) {
+        Locale.setDefault(locale);
+        Configuration configuration = new Configuration();
+        configuration.locale = locale;
+        getBaseContext().getResources()
+                .updateConfiguration(configuration,
+                        getBaseContext()
+                                .getResources()
+                                .getDisplayMetrics());
+        setTitle(R.string.app_name);
+
+        TextView lang = findViewById(R.id.language);
+        lang.setText(R.string.language);
+
+        RadioButton meters = findViewById(R.id.meter);
+        meters.setText(R.string.meter);
+
+        RadioButton centimeters = findViewById(R.id.centimeter);
+        centimeters.setText(R.string.centimeter);
+
+        RadioButton kilometers = findViewById(R.id.kilometer);
+        kilometers.setText(R.string.kilometer);
+
+        RadioButton feet = findViewById(R.id.foot);
+        feet.setText(R.string.foot);
+
+        RadioButton inches = findViewById(R.id.inch);
+        inches.setText(R.string.inch);
+
+        RadioButton miles = findViewById(R.id.mile);
+        miles.setText(R.string.mile);
+
+        EditText text = findViewById(R.id.enter);
+        text.setHint(R.string.enter);
+
+        TextView meter_res = findViewById(R.id.meter_res);
+        meter_res.setText(R.string.meter);
+
+        TextView centimeter_res = findViewById(R.id.centimeter_res);
+        centimeter_res.setText(R.string.centimeter);
+
+        TextView foot_res = findViewById(R.id.foot_res);
+        foot_res.setText(R.string.foot);
+
+        TextView kilometer_res = findViewById(R.id.kilometer_res);
+        kilometer_res.setText(R.string.kilometer);
+
+        TextView inch_res = findViewById(R.id.inch_res);
+        inch_res.setText(R.string.inch);
+
+        TextView mile_res = findViewById(R.id.mile_res);
+        mile_res.setText(R.string.mile);
     }
 
     @SuppressLint("NonConstantResourceId")

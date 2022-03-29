@@ -13,18 +13,22 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/language"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/language_ru"
-            android:textAlignment="center" />
+            android:gravity="center"
+            android:text="@string/language"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="center"
             android:minHeight="48dp"
             tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
@@ -36,62 +40,68 @@
 
         <RadioButton
             android:id="@+id/meter"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checked="true"
             android:onClick="onRadioButtonClicked"
-            android:text="@string/meter_ru"
+            android:text="@string/meter"
+            android:textSize="18sp"
             app:layout_columnWeight="1" />
 
         <RadioButton
             android:id="@+id/centimeter"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked"
-            android:text="@string/centimeter_ru"
+            android:text="@string/centimeter"
+            android:textSize="18sp"
             app:layout_columnWeight="1" />
 
         <RadioButton
             android:id="@+id/foot"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked"
-            android:text="@string/foot_ru"
+            android:text="@string/foot"
+            android:textSize="18sp"
             app:layout_columnWeight="1" />
 
         <RadioButton
             android:id="@+id/kilometer"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked"
-            android:text="@string/kilometer_ru"
+            android:text="@string/kilometer"
+            android:textSize="18sp"
             app:layout_columnWeight="1" />
 
         <RadioButton
             android:id="@+id/inch"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked"
-            android:text="@string/inch_ru"
+            android:text="@string/inch"
+            android:textSize="18sp"
             app:layout_columnWeight="1" />
 
         <RadioButton
             android:id="@+id/mile"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked"
-            android:text="@string/mile_ru"
+            android:text="@string/mile"
+            android:textSize="18sp"
             app:layout_columnWeight="1" />
 
     </RadioGroup>
 
     <EditText
-        android:id="@+id/editTextNumber2"
+        android:id="@+id/enter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/enter_ru"
+        android:hint="@string/enter"
         android:inputType="number"
         android:minHeight="48dp"
         tools:ignore="TextContrastCheck" />
@@ -106,7 +116,10 @@
             android:id="@+id/meter_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:text="@string/zero"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_column="0"
             app:layout_columnWeight="3"
             app:layout_row="0" />
@@ -115,7 +128,10 @@
             android:id="@+id/meter_res"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/meter_ru"
+            android:padding="10dp"
+            android:text="@string/meter"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_column="1"
             app:layout_columnWeight="1"
             app:layout_row="0" />
@@ -124,7 +140,10 @@
             android:id="@+id/centimeter_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:text="@string/zero"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_column="0"
             app:layout_columnWeight="3"
             app:layout_row="1" />
@@ -133,7 +152,10 @@
             android:id="@+id/centimeter_res"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/centimeter_ru"
+            android:padding="10dp"
+            android:text="@string/centimeter"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_column="1"
             app:layout_columnWeight="1"
             app:layout_row="1" />
@@ -142,7 +164,10 @@
             android:id="@+id/foot_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:text="@string/zero"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_column="0"
             app:layout_columnWeight="3"
             app:layout_row="2" />
@@ -151,7 +176,10 @@
             android:id="@+id/foot_res"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/foot_ru"
+            android:padding="10dp"
+            android:text="@string/foot"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_column="1"
             app:layout_columnWeight="1"
             app:layout_row="2" />
@@ -160,7 +188,10 @@
             android:id="@+id/kilometer_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:text="@string/zero"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_column="0"
             app:layout_columnWeight="3"
             app:layout_row="3" />
@@ -169,7 +200,10 @@
             android:id="@+id/inch_res"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/inch_ru"
+            android:padding="10dp"
+            android:text="@string/inch"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_column="1"
             app:layout_columnWeight="1"
             app:layout_row="4" />
@@ -178,7 +212,10 @@
             android:id="@+id/kilometer_res"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/kilometer_ru"
+            android:padding="10dp"
+            android:text="@string/kilometer"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_column="1"
             app:layout_columnWeight="1"
             app:layout_row="3" />
@@ -187,7 +224,10 @@
             android:id="@+id/inch_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:text="@string/zero"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_column="0"
             app:layout_columnWeight="3"
             app:layout_row="4" />
@@ -196,7 +236,10 @@
             android:id="@+id/mile_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:text="@string/zero"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_column="0"
             app:layout_columnWeight="3"
             app:layout_row="5" />
@@ -205,7 +248,10 @@
             android:id="@+id/mile_res"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/mile_ru"
+            android:padding="10dp"
+            android:text="@string/mile"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_column="1"
             app:layout_columnWeight="1"
             app:layout_row="5" />

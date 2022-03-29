@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Converter</string>
+    <string name="meter">meters</string>
+    <string name="centimeter">centimeters</string>
+    <string name="kilometer">kilometers</string>
+    <string name="foot">feet</string>
+    <string name="mile">miles</string>
+    <string name="inch">inches</string>
+    <string name="language">Language</string>
+    <string name="enter">Enter a number</string>
+</resources>

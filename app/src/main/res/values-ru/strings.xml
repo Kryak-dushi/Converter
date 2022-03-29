@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Конвертер</string>
-    <string name="zero" translatable="false">0</string>
     <string name="meter">метры</string>
     <string name="centimeter">сантиметры</string>
     <string name="kilometer">километры</string>
